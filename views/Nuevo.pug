@@ -1,0 +1,24 @@
+extends template.pug
+
+block content
+    .row
+        .col-md-8
+            form(action="/Nuevo", method="post", enctype="multipart/form-data")
+                .form-group
+                    label(for="nombre") Nombre
+                    input(type="text", id="nombre", name="nombre", class="form-control")
+                .form-group
+                    label(for="apellidos") Apellidos
+                    input(type="text", id="apellidos", name="apellidos", class="form-control")
+                .form-group
+                    label(for="direccion") Dirección
+                    input(type="text", id="direccion", name="direccion", class="form-control")
+                .form-group
+                    label(for="sexo") Sexo
+                    select(type="text", id="sexo", name="sexo", class="form-control")
+                        option(value="Hombre") Hombre
+                        option(value="Mujer") Mujer
+                .form-group
+                    label(for="foto") Foto
+                    input(type="file", id="foto", name="foto", class="form-control-file")
+                <button type="submit" class="btn btn-primary">Guardar</button>
